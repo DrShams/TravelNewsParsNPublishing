@@ -32,7 +32,7 @@ class HTMLParser:
         # Get the latest news block
         main_container = soup.select_one("div.H6jWj.commercial-branding")
         if main_container:
-            # Find the relevant news blocks
+            # Find the relevant ...
             news_blocks = main_container.select("div.VxecQ[data-travel_media-desktop^='top_news_block']")
             if news_blocks:
                 logging.debug(f"news_blocks HTML:\n{news_blocks}")
