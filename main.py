@@ -70,7 +70,8 @@ class Main:
                 logging.info("News Approved")
             else:
                 logging.warning("No recent news found.")
-                numlinks = len(self.config.get_sources())
+                sources = self.config.get_sources()
+                numlinks = len(sources.get('Votpusk', {}).get('endpoints', []))
                 if attempt > numlinks:
                     logging.warning("No news for today")
 
@@ -139,16 +140,16 @@ class Main:
     def get_random_rss_url(self):
         """Return random RSS URL from Config file."""
         sources = self.config.get_sources()
-        random_source_name = random.choice(list(sources.keys()))
-        random_source = sources[random_source_name]
-        random_endpoint = random.choice(random_source['endpoints'])
+        random_source_name = random.choice(list(sources.keys()))  # Choose a random source name
+        random_source = sources[random_source_name]  # Get the source details
+        random_endpoint = random.choice(random_source['endpoints'])  # Choose a random endpoint
         
         # Ensure the endpoint is concatenated correctly to the base URL
         base_url = random_source['url'].rstrip('/')  # Remove trailing slashes from base URL
         if random_endpoint.startswith('/'):
             random_endpoint = random_endpoint.lstrip('/')
         
-        rss_url = base_url + '/' + random_endpoint
+        rss_url = f"{base_url}/{random_endpoint}"  # Construct the full URL
         return rss_url
 
 if __name__ == "__main__":
