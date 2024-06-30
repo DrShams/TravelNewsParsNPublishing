@@ -22,11 +22,14 @@ class RSSParser:
 
     def fetch_rss_content(self):
         """Fetch the RSS content."""
-
         try:
             response = requests.get(self.url, timeout=60)
-        except Exception as e:
-            print(e)
+            response.raise_for_status()  # Raise HTTPError for bad responses
+            self.xml_content = response.content.decode('utf-8')
+            logging.info("RSS content was successfully fetched")
+        except requests.exceptions.RequestException as e:
+            logging.error(f"Error fetching RSS content: {e}")
+            raise  # Re-raise the exception to indicate fetch failure
 
         self.xml_content = response.content
         logging.info("Content RSS was recieves")
@@ -37,14 +40,30 @@ class RSSParser:
         [2]Compare published date with current date and if that date less that value from config return that this news is valid
         [3]Open last_news.json file, compare links guid, and if that news already was published before
         """
-        root = ET.fromstring(self.xml_content)
+        if not self.xml_content:
+            logging.error("RSS content is empty or not fetched")
+            return False
+
+        try:
+            root = ET.fromstring(self.xml_content)
+        except ET.ParseError as e:
+            logging.error(f"Error parsing RSS content: {e}")
+            return False
+
+        # Initialize variables to store parsed data
+        parsed_date = None
+        guid = None
 
         #Retrieve only last element
         for item in root.findall(".//item"):
             pub_date = item.find("pubDate").text
             guid = item.find("guid").text
             # Parse the date string
-            parsed_date = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M %z")
+            try:
+                parsed_date = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M %z")
+            except ValueError as e:
+                logging.error(f"Error parsing publication date: {e}")
+                continue
 
             # Calculate the difference between today's date and the parsed date
             today = datetime.now(timezone.utc)
@@ -53,7 +72,7 @@ class RSSParser:
 
             self.latest_item = item
             self.latest_pub_date = pub_date
-            break#we retrieve just first news
+            break  # Exit loop after retrieving first news item
 
         logging.info(f"Last news with {parsed_date} was recieved this news was publicated {days} days ago")
         if days < news_age_limit_days:

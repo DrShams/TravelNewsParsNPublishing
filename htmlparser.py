@@ -144,13 +144,13 @@ class HTMLParser:
                 logging.error(f"Failed to retrieve image from {image_url}. Status code: {response.status_code}")
                 return None
             
-            parsed_url = urlparse(image_url)
-            image_extension = os.path.splitext(os.path.basename(parsed_url.path))[1]
-            logging.debug(f'image extension {image_extension}')
-
-            #CLUTCH BAD IDEA IT MIGHT ME .web extention
-            # If the extension is not found or is empty, use a default extension like .jpg
-            if not image_extension:
+             # Get the Content-Type header to determine the file extension
+            content_type = response.headers.get('Content-Type')
+            if content_type:
+                image_extension = self.get_image_extension_from_content_type(content_type)
+                logging.info(f'image_extension detected as {image_extension}')
+            else:
+                logging.warning(f"Content-Type header not found for {image_url}. Using default extension .jpg")
                 image_extension = ".jpg"
 
             local_image_filename = f"image_temp{image_extension}"
@@ -162,12 +162,26 @@ class HTMLParser:
         except Exception as err:
             logging.error(f"Failed to retrieve image. {err}")
             return None
-
+        
+    def get_image_extension_from_content_type(self, content_type):
+        """Extract image extension from Content-Type header."""
+        if 'image/jpeg' in content_type:
+            return '.jpg'
+        elif 'image/png' in content_type:
+            return '.png'
+        elif 'image/gif' in content_type:
+            return '.gif'
+        elif 'image/webp' in content_type:
+            return '.webp'
+        else:
+            logging.warning(f"Unsupported Content-Type: {content_type}. Using default extension .jpg")
+            return '.jpg'
+        
     def save_to_json(self, filename="last_news.json"):
         """Save extracted information to JSON."""
         with open(filename, "w", encoding="utf-8") as json_file:
             json.dump(self.extracted_info, json_file, ensure_ascii=False, indent=2)
-            logging.info(f"Extracted information saved to {filename}")
+            logging.info(f"Extracted information from url {self.url} saved to {filename}")
 
     def check_news_for_being_published_before(self, current_guid):
         """Check if the news was already published before."""

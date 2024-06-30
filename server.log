@@ -1,95 +1,26 @@
-[2024-06-30 18:08:33] [INFO] Random TravelLinks Link: https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:08:33] [INFO] other_sources_links {'all': 'https://travel.rambler.ru/abroad/'}
-[2024-06-30 18:08:33] [INFO] other_source_url https://travel.rambler.ru/abroad/
-[2024-06-30 18:08:33] [INFO] Content RSS was recieves
-[2024-06-30 18:08:33] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:08:33] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:08:33] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:08:34] [INFO] Content RSS was recieves
-[2024-06-30 18:08:34] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:08:34] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAW.xml
-[2024-06-30 18:08:34] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:08:34] [INFO] Content RSS was recieves
-[2024-06-30 18:08:34] [INFO] Last news with 2024-02-26 00:00:00+00:00 was recieved this news was publicated 125 days ago
-[2024-06-30 18:08:34] [WARNING] No news for today
-[2024-06-30 18:08:38] [INFO] Content HTML was received with url 
+[%Y-%m-%d %H:%M:%S] [INFO] RSS content was successfully fetched
+[%Y-%m-%d %H:%M:%S] [INFO] Content RSS was recieves
+[%Y-%m-%d %H:%M:%S] [ERROR] Error parsing RSS content: syntax error: line 1, column 0
+[%Y-%m-%d %H:%M:%S] [WARNING] No recent news found.
+[%Y-%m-%d %H:%M:%S] [INFO] RSS content was successfully fetched
+[%Y-%m-%d %H:%M:%S] [INFO] Content RSS was recieves
+[%Y-%m-%d %H:%M:%S] [ERROR] Error parsing RSS content: syntax error: line 1, column 0
+[%Y-%m-%d %H:%M:%S] [WARNING] No recent news found.
+[%Y-%m-%d %H:%M:%S] [INFO] RSS content was successfully fetched
+[%Y-%m-%d %H:%M:%S] [INFO] Content RSS was recieves
+[%Y-%m-%d %H:%M:%S] [INFO] Last news with 2024-05-21 00:00:00+00:00 was recieved this news was publicated 40 days ago
+[%Y-%m-%d %H:%M:%S] [WARNING] No recent news found.
+[%Y-%m-%d %H:%M:%S] [WARNING] No news for today
+[%Y-%m-%d %H:%M:%S] [INFO] other_source_url + /abroad/
+[%Y-%m-%d %H:%M:%S] [INFO] Content HTML was received with url 
 https://travel.rambler.ru/abroad/
-[2024-06-30 18:08:39] [INFO] Image saved locally as image_temp.jpg
-[2024-06-30 18:08:42] [INFO] Content HTML was received with url 
-https://travel.rambler.ru/abroad/53010086-turtsiya-riskuet-poteryat-rossiyskih-turistov-turisticheskiy-sektor-strany-bet-trevogu/
-[2024-06-30 18:08:42] [INFO] Publication date found: 2024-06-30 16:50:07+03:00
-[2024-06-30 18:09:46] [INFO] Random TravelLinks Link: https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:09:46] [INFO] other_sources_links {'all': 'https://travel.rambler.ru/abroad/'}
-[2024-06-30 18:09:46] [INFO] other_source_url https://travel.rambler.ru/abroad/
-[2024-06-30 18:09:47] [INFO] Content RSS was recieves
-[2024-06-30 18:09:47] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:09:47] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:09:47] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:09:47] [INFO] Content RSS was recieves
-[2024-06-30 18:09:47] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:09:47] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAW.xml
-[2024-06-30 18:09:47] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:09:47] [INFO] Content RSS was recieves
-[2024-06-30 18:09:47] [INFO] Last news with 2024-02-26 00:00:00+00:00 was recieved this news was publicated 125 days ago
-[2024-06-30 18:09:47] [WARNING] No news for today
-[2024-06-30 18:09:51] [INFO] Content HTML was received with url 
-https://travel.rambler.ru/abroad/
-[2024-06-30 18:09:51] [INFO] Image saved locally as image_temp.jpg
-[2024-06-30 18:09:54] [INFO] Content HTML was received with url 
-https://travel.rambler.ru/abroad/53010086-turtsiya-riskuet-poteryat-rossiyskih-turistov-turisticheskiy-sektor-strany-bet-trevogu/
-[2024-06-30 18:09:54] [INFO] Publication date found: 2024-06-30 16:50:07+03:00
-[2024-06-30 18:19:13] [INFO] Random TravelLinks Link: https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:19:13] [INFO] other_sources_links {'all': 'https://travel.rambler.ru/abroad/'}
-[2024-06-30 18:19:13] [INFO] other_source_url https://travel.rambler.ru/abroad/
-[2024-06-30 18:19:14] [INFO] Content RSS was recieves
-[2024-06-30 18:19:14] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:19:14] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:19:14] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:19:14] [INFO] Content RSS was recieves
-[2024-06-30 18:19:14] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:19:14] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAW.xml
-[2024-06-30 18:19:14] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:19:15] [INFO] Content RSS was recieves
-[2024-06-30 18:19:15] [INFO] Last news with 2024-02-26 00:00:00+00:00 was recieved this news was publicated 125 days ago
-[2024-06-30 18:19:15] [WARNING] No news for today
-[2024-06-30 18:19:18] [INFO] Content HTML was received with url 
-https://travel.rambler.ru/abroad/
-[2024-06-30 18:19:20] [INFO] Image saved locally as image_temp.jpg
-[2024-06-30 18:19:23] [INFO] Content HTML was received with url 
-https://travel.rambler.ru/abroad/53010086-turtsiya-riskuet-poteryat-rossiyskih-turistov-turisticheskiy-sektor-strany-bet-trevogu/
-[2024-06-30 18:19:23] [INFO] Publication date found: 2024-06-30 16:50:07+03:00
-[2024-06-30 18:19:23] [INFO] HTML news 'Повышение цен: туристический сектор Турции обеспокоен инфляцией' is recent and valid.
- here is extracted info {'Title': 'Повышение цен: туристический сектор Турции обеспокоен инфляцией', 'Description': 'Туристический сектор Турции, который всегда гордился своим гостеприимством и доступными ценами, сегодня находится в тревожном положении. Страна, ежегодно получающая от туризма более $50 млрд, рискует потерять своих главных клиентов – россиян и европейцев. Причиной тому – взлетевшие цены на отдых, которые становятся все более непривлекательными для путешественников.\nОсновная проблема – стремительная инфляция в Турции. Правительство, пытаясь сдержать ее рост, искусственно удерживает валютный курс. В результате, турецкая лира дешевеет, а цены на товары и услуги, выраженные в иностранной валюте, растут.\nЭто напрямую отражается на стоимости отдыха в Турции. По словам эксперта Тайлана Беюкшахина, недельная поездка, которая раньше стоила 1,5-2 тысячи долларов, теперь обходится в 3 тысячи и больше. Такая динамика делает отдых в Турции менее привлекательным, особенно для россиян и европейцев, которые могут найти более выгодные предложения в других странах Средиземноморья – Египте, Кипре, Греции и Испании.\nТурецкие бизнесмены, понимая опасность ситуации, располагают цены в иностранной валюте, чтобы сохранить прибыль. Однако, такой подход только усугубляет проблему и заставляет туристов искать альтернативные направления. В результате, туристический сектор Турции рискует потерять своих ключевых клиентов и столкнуться с падением доходов.', 'Publication Date': 'Sun, 30 Jun 2024 16:50 +0300', 'ImageFileName': 'image_temp.jpg', 'Guid': 'https://travel.rambler.ru/abroad/53010086-turtsiya-riskuet-poteryat-rossiyskih-turistov-turisticheskiy-sektor-strany-bet-trevogu/'}
-[2024-06-30 18:19:23] [INFO] News from HTML source approved
-[2024-06-30 18:19:23] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAW.xml
-[2024-06-30 18:19:23] [INFO] NEWS OLD attempt 2 / 1
-[2024-06-30 18:19:23] [INFO] Extracted information saved to last_news.json
-[2024-06-30 18:19:23] [INFO] Url for uploading photos was recieved https://pu.vk.com/c844629/ss2115/upload.php?act=do_add&mid=151028064&aid=299629472&gid=0&hash=44e2ea0bf4a78042809d506af63c6725&rhash=968596faf7b4fd306d03afde55d97d71&swfupload=1&api=1
-[2024-06-30 18:19:25] [INFO] Photo was uploaded to the vk server's host and has an id 457244824
-[2024-06-30 18:19:25] [INFO] Content successfully posted to vk wall with title Повышение цен: туристический сектор Турции обеспокоен инфляцией
-[2024-06-30 18:45:39] [INFO] Random TravelLinks Link: https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:45:39] [INFO] other_sources_links {'all': 'https://travel.rambler.ru/abroad/'}
-[2024-06-30 18:45:39] [INFO] other_source_url https://travel.rambler.ru/abroad/
-[2024-06-30 18:45:39] [INFO] Content RSS was recieves
-[2024-06-30 18:45:39] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:45:39] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAE.xml
-[2024-06-30 18:45:39] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:45:39] [INFO] Content RSS was recieves
-[2024-06-30 18:45:39] [INFO] Last news with 2024-05-16 00:00:00+00:00 was recieved this news was publicated 45 days ago
-[2024-06-30 18:45:39] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAW.xml
-[2024-06-30 18:45:39] [INFO] NEWS OLD attempt 1 / 1
-[2024-06-30 18:45:40] [INFO] Content RSS was recieves
-[2024-06-30 18:45:40] [INFO] Last news with 2024-02-26 00:00:00+00:00 was recieved this news was publicated 125 days ago
-[2024-06-30 18:45:40] [WARNING] No news for today
-[2024-06-30 18:45:43] [INFO] Content HTML was received with url 
-https://travel.rambler.ru/abroad/
-[2024-06-30 18:45:44] [INFO] Image saved locally as image_temp.jpg
-[2024-06-30 18:45:48] [INFO] Content HTML was received with url 
+[%Y-%m-%d %H:%M:%S] [INFO] image_extension detected as .jpg
+[%Y-%m-%d %H:%M:%S] [INFO] Image saved locally as image_temp.jpg
+[%Y-%m-%d %H:%M:%S] [INFO] Content HTML was received with url 
 https://travel.rambler.ru/abroad/53009458-turagent-savitskaya-nazvala-neskolko-byudzhetnyh-napravleniy-dlya-otdyha-est-ne-tolko-turtsiya/
-[2024-06-30 18:45:48] [INFO] Publication date found: 2024-06-30 18:23:22+03:00
-[2024-06-30 18:45:48] [INFO] HTML news 'Турагент назвал бюджетные направления для отдыха' is recent and valid.
+[%Y-%m-%d %H:%M:%S] [INFO] Publication date found: 2024-06-30 18:23:22+03:00
+[%Y-%m-%d %H:%M:%S] [INFO] HTML news 'Турагент назвал бюджетные направления для отдыха' is recent and valid.
  here is extracted info {'Title': 'Турагент назвал бюджетные направления для отдыха', 'Description': 'Летом цены на отдых в Турции значительно выросли, при этом курорты страны остаются востребованными у россиян. О том, когда выгоднее всего брать путевки и почему не стоит надеяться на горящие туры, рассказала турэксперт Юлия Савицкая.\nТурэксперт отметила, что Турция сейчас остается лидером среди стран для отдыха, потому что россиянам легче добраться до нее с логистической точки зрения, а стоимость путевки держится на том же уровне, что на отпуск внутри России.\nПо словам специалиста, при планировании отдыха надеяться на горящие путевки не стоит, так как они сравнимы с лотереей, к этому добавляется то, что сейчас туроператоры перестали выкупать такое большое количество чартеров, которые горели. Поэтому, если есть желание отдохнуть в других странах, более бюджетными вариантами могут стать Египет, ОАЭ, Таиланд, а также Китай, передает 360.ru.\nРанее вице-президент АТОР Тарас Кобищанов рассказал, сколько будет стоить путевка в Турцию на двоих в июле. Специалист отметил, что за летний отдых в этой стране придентся выложить от 135 тысяч рублей. Так, туры на 10 ночей с учетом перелета из Москвы в простые четырехзвездочные турецкие отели могут обойтись в среднем в 135–160 тысяч на двоих человек.', 'Publication Date': 'Sun, 30 Jun 2024 18:23 +0300', 'ImageFileName': 'image_temp.jpg', 'Guid': 'https://travel.rambler.ru/abroad/53009458-turagent-savitskaya-nazvala-neskolko-byudzhetnyh-napravleniy-dlya-otdyha-est-ne-tolko-turtsiya/'}
-[2024-06-30 18:45:48] [INFO] News from HTML source approved
-[2024-06-30 18:45:48] [INFO] Random Travel Link:https://www.votpusk.ru/newsrss/cn/newsAW.xml
-[2024-06-30 18:45:48] [INFO] NEWS OLD attempt 2 / 1
-[2024-06-30 18:45:48] [INFO] Extracted information saved to last_news.json
+[%Y-%m-%d %H:%M:%S] [INFO] News from HTML source approved
+[%Y-%m-%d %H:%M:%S] [INFO] Extracted information from url https://travel.rambler.ru/abroad/53009458-turagent-savitskaya-nazvala-neskolko-byudzhetnyh-napravleniy-dlya-otdyha-est-ne-tolko-turtsiya/ saved to last_news.json
+[%Y-%m-%d %H:%M:%S] [INFO] Successfully removed image_temp.jpg

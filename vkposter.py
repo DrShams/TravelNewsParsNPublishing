@@ -1,14 +1,11 @@
 import logging
-
 import requests
-
 from configurator import Configurator
-
 
 class VKPoster:
     """ Class for posting data to the wall VK social media -> REST"""
 
-    def __init__(self, config_file='config.conf'):
+    def __init__(self, config_file='config.yaml'):
         """Initializes a VKPoster object. :param config_file: The path to the configuration file. """
         self.config = Configurator(config_file=config_file)
 
@@ -27,14 +24,14 @@ class VKPoster:
 
         if filename is not None:
 
-            access_token = self.config.get_vk_settings()['access_token']
-            version_vk = self.config.get_vk_settings()['vk_version']
-            vk_owner_id = self.config.get_vk_settings()['vk_owner_id']
-            user_albumid = self.config.get_vk_settings()['user_albumid']
-            myuser_id = self.config.get_vk_settings()['myuser_id']
+            access_token = self.config.get_vk_settings().get('access_token')
+            version_vk = self.config.get_vk_settings().get('vk_version')
+            vk_owner_id = self.config.get_vk_settings().get('vk_owner_id')
+            user_albumid = self.config.get_vk_settings().get('user_albumid')
+            myuser_id = self.config.get_vk_settings().get('myuser_id')
 
             photo_id = self.upload_photo_to_vk(access_token, user_albumid, filename, version_vk)
-            photo = "photo" + myuser_id + "_" + str(photo_id)
+            photo = f"photo{myuser_id}_{photo_id}"
 
             response = requests.post(
                 url=url,
@@ -89,20 +86,20 @@ class VKPoster:
             photo_data = {'file1': file}
 
             upload_response = requests.post(upload_url, files=photo_data, timeout=60).json()
-            logging.debug("upload_response " + str(upload_response))
+            logging.debug(f"Upload response: {upload_response}")
 
         save_url = 'https://api.vk.com/method/photos.save'
         save_params = {
             'access_token': access_token,
-            'album_id': upload_response['aid'],
-            'server': upload_response['server'],
-            'photos_list': upload_response['photos_list'],
-            'hash': upload_response['hash'],
+            'album_id': upload_response.get('aid'),
+            'server': upload_response.get('server'),
+            'photos_list': upload_response.get('photos_list'),
+            'hash': upload_response.get('hash'),
             'v': version,
         }
 
         save_response = requests.post(save_url, params=save_params, timeout=60).json()
-        logging.debug("Save_response " + str(save_response))
+        logging.debug(f"Save response: {save_response}")
 
         photo_id = save_response['response'][0]['id']
         logging.info(f"Photo was uploaded to the vk server's host and has an id {photo_id}")
