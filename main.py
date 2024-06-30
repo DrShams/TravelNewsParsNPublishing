@@ -124,7 +124,7 @@ class Main:
                 filename = "image_temp.jpg"  # CAREFUL EXTENSION MIGHT BE DIFFERENT!
 
             # Post news to VK
-            # self.vk_poster.post_to_vk_wall(self.rss_parser.extracted_info if self.rss_parser.latest_item else self.html_parser.extracted_info)
+            self.vk_poster.post_to_vk_wall(self.rss_parser.extracted_info if self.rss_parser.latest_item else self.html_parser.extracted_info)
             try:
                 os.remove(filename)
                 logging.info(f'Successfully removed {filename}')
