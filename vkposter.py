@@ -22,13 +22,13 @@ class VKPoster:
         # Combine title and description with a newline
         message = f"{title}\n\n{description}"
 
+        access_token = self.config.get_vk_settings().get('access_token')
+        version_vk = self.config.get_vk_settings().get('vk_version')
+        vk_owner_id = self.config.get_vk_settings().get('vk_owner_id')
+        user_albumid = self.config.get_vk_settings().get('user_albumid')
+        myuser_id = self.config.get_vk_settings().get('myuser_id')
+        
         if filename is not None:
-
-            access_token = self.config.get_vk_settings().get('access_token')
-            version_vk = self.config.get_vk_settings().get('vk_version')
-            vk_owner_id = self.config.get_vk_settings().get('vk_owner_id')
-            user_albumid = self.config.get_vk_settings().get('user_albumid')
-            myuser_id = self.config.get_vk_settings().get('myuser_id')
 
             photo_id = self.upload_photo_to_vk(access_token, user_albumid, filename, version_vk)
             photo = f"photo{myuser_id}_{photo_id}"

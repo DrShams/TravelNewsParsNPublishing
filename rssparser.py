@@ -47,7 +47,8 @@ class RSSParser:
         try:
             root = ET.fromstring(self.xml_content)
         except ET.ParseError as e:
-            logging.error(f"Error parsing RSS content: {e}")
+            logging.error(f"Error parsing RSS content: {e}\n{self.xml_content}")
+            #exit(1)
             return False
 
         # Initialize variables to store parsed data
@@ -124,7 +125,9 @@ class RSSParser:
         soup = BeautifulSoup(html_content, "html.parser")
         try:
             # Extract the image using the provided XPath
-            image = soup.select_one("html > body > main > div:nth-of-type(3) > div > article > div > img")
+            image = soup.select_one(".landmark-info__head-img")
+            #/html/body/main/div[3]/div/article/div/img
+            #.landmark-info__head-img
             image_url = image.get("src")
             self.extracted_info["Image URL"] = image_url
 
