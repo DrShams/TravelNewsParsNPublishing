@@ -48,6 +48,7 @@ class Main:
                 numlinks = len(sources.get('Votpusk', {}).get('endpoints', []))
                 if attempt > numlinks:
                     logging.warning("No news for today")
+                    break
 
         # Save news to the file
         if is_news_recent:
