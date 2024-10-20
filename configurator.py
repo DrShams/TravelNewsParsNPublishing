@@ -46,3 +46,33 @@ class Configurator:
         else:
             logging.error(f"Section {section_name} not found in the config file")
             return []
+        
+class LoggerConfigurator:
+    def __init__(self, config):
+        self.config = config
+
+    def configure(self):
+        """Set up logging"""
+        logging_level = self.config.get_logging_level()
+        file_path = self.config.get_file_path()
+        date_format = self.config.get_date_format()
+
+        print(f"Logging Level: {logging_level}, File Path: {file_path}, Date Format: {date_format}")  # Debug Line
+
+        logging.basicConfig(
+            level=logging.getLevelName(logging_level),
+            format='[%(asctime)s] [%(levelname)s] %(message)s',
+            datefmt=date_format
+        )
+
+        # Create a file handler and set the logging level
+        file_handler = logging.FileHandler(file_path, encoding='utf-8')
+        file_handler.setLevel(logging.INFO)
+
+        # Create a formatter for the file handler
+        file_formatter = logging.Formatter('[%(asctime)s] [%(levelname)s] %(message)s', datefmt=date_format)
+        file_handler.setFormatter(file_formatter)
+
+        # Get the root logger and add the file handler
+        logger = logging.getLogger()
+        logger.addHandler(file_handler)

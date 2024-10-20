@@ -4,7 +4,7 @@ import json
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
-
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -129,22 +129,30 @@ class RSSParser:
             #/html/body/main/div[3]/div/article/div/img
             #.landmark-info__head-img
             image_url = image.get("src")
-            self.extracted_info["Image URL"] = image_url
+            logging.info(image_url)
+            match = re.search(r"(https://.*)$", image_url)
+            if match:
+                image_url = match.group(1)
+                print(image_url)
+                self.extracted_info["Image URL"] = image_url
 
-            # Download the image
-            image_response = requests.get(image_url, timeout = 60)
+                # Download the image
+                image_response = requests.get(image_url, timeout = 60)
 
-            # Extract the file extension from the image URL
-            parsed_url = urlparse(image_url)
-            image_extension = os.path.splitext(os.path.basename(parsed_url.path))[1]
+                # Extract the file extension from the image URL
+                parsed_url = urlparse(image_url)
+                image_extension = os.path.splitext(os.path.basename(parsed_url.path))[1]
 
-            # Save the image locally using the original file extension
-            local_image_filename = f"image_temp{image_extension}"
-            with open(local_image_filename, "wb") as image_file:
-                image_file.write(image_response.content)
+                # Save the image locally using the original file extension
+                local_image_filename = f"image_temp{image_extension}"
+                with open(local_image_filename, "wb") as image_file:
+                    image_file.write(image_response.content)
 
-            logging.info(f"Image saved locally as {local_image_filename}")
-            return local_image_filename
+                logging.info(f"Image saved locally as {local_image_filename}")
+                return local_image_filename
+            else:
+                logging.error("No URL found. for the image url {image_url}")
+
         except Exception as err:
             logging.error(f"No image found on the page. {err}")
             return None
